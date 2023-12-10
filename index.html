@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +10,11 @@
 <body>
     
     <div id="app">
-        <button id="BUY"  @click="addValue">BUY</button>
+        <div id="basket">
+            <h2>current total price</h2>
+            <p>{{total}}€</p>
+        </div>
+        <button :class="{ 'instock': stock, 'nostock': !stock }" @click="addValue">{{ stock ? 'BUY' : 'No stock' }}</button>
         <button  id="next" @click="nextBook">></button>
         <button id="prev" @click="prevBook"><</button>
         <h1>Harry Potter Store</h1>
@@ -42,7 +44,7 @@
     </div>
     <script src="js/script.js"></script>
     <footer>
-        <h5></h5>
+       
     </footer>
 </body>
 </html>
