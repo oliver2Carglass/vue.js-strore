@@ -174,3 +174,39 @@ footer{
     font-family: HP;
     margin-top: 0;
 }
+
+
+form{
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin-left: 15vw;
+    height: 40vh;
+    margin-top: 5vh;
+    background-color: rgb(204, 204, 204);
+
+}
+
+form label{
+    font-size: 50px;
+}
+
+textarea{
+    width: 50vw;
+    height: 15vh;
+    font-size: 2vh;
+}
+
+input{
+    font-size: 3vh;
+    width: 25vw;
+    height: 5vh;
+}
+
+form button{
+    width: 10vw;
+    height: 5vh;
+    background-color: lightblue;
+    margin-left: 30vw;
+}

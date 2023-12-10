@@ -6,7 +6,9 @@ const app = Vue.createApp({
             stockData: [], // Ajoutez une propriété pour stocker les données du stock.json
             currentBookIndex: 0, // Ajoutez une propriété pour suivre l'index actuel du livre
             total: 0,
-            stock: false
+            stock: false,
+            email: '', // Ajoutez une propriété pour stocker l'e-mail
+            feedback: ''
         };
     },
     mounted() {
@@ -64,7 +66,18 @@ const app = Vue.createApp({
             if (this.currentSection === 'movie') {
                 this.stock = stockElement ? stockElement.movie : false;
             }
+        },
+        
+        submitFeedback() {
+            // Ici, tu peux envoyer l'e-mail et le feedback à un serveur, enregistrer dans une base de données, etc.
+            console.log('E-mail:', this.email);
+            console.log('Feedback:', this.feedback);
+
+            // Réinitialise les champs après l'envoi
+            this.email = '';
+            this.feedback = '';
         }
+        
         
     }
 });
