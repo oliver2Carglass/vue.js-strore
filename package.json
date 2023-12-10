@@ -1,0 +1,81 @@
+{
+  "harryPotterCollection": [
+    {
+      "bookName": "Harry Potter and the Philosopher's Stone",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-1.jpg&w=1320&q=75",
+        "price": 15.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71dtmwLA3ML.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 19.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the Chamber of Secrets",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-2.jpg&w=1320&q=75",
+        "price": 16.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/61pGKELm21L.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 21.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the Prisoner of Azkaban",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-3.jpg&w=1320&q=75",
+        "price": 17.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71J22VUSXNL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 23.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the Goblet of Fire",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-4.jpg&w=1320&q=75",
+        "price": 18.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71DmBF2SE3L.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 24.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the order of the phoenix",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-5.jpg&w=1320&q=75",
+        "price": 19.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71sb6O0HpLL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 26.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the Half-Blood Prince",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-6.jpg&w=1320&q=75",
+        "price": 20.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71C4bkYFWSL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 27.99
+      }
+    },
+    {
+      "bookName": "Harry Potter and the Deathly Hallows",
+      "book": {
+        "image": "https://www.wizardingworld.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-7.jpg&w=1320&q=75",
+        "price": 22.99
+      },
+      "movie": {
+        "image": "https://m.media-amazon.com/images/I/71NcTr6gAVL.__AC_SX300_SY300_QL70_ML2_.jpg",
+        "price": 26.99
+      }
+    }
+  ]
+}

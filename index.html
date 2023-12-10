@@ -1,0 +1,48 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <button id="BUY"  @click="addValue">BUY</button>
+        <button  id="next" @click="nextBook">></button>
+        <button id="prev" @click="prevBook"><</button>
+        <h1>Harry Potter Store</h1>
+        <div id="swipboard">
+            <div :class="{ 'swip': true, 'active-swip': currentSection === 'book' }" style="border-radius: 50px 0 0 0;" @click="swipSection('book')">Book</div>
+            <div :class="{ 'swip': true, 'active-swip': currentSection === 'movie' }" style="border-radius: 0 50px 0 0;" @click="swipSection('movie')">Movie</div>
+        </div>
+        
+        
+        
+
+        <div class="part" id="book" v-show="currentSection === 'book'" :key="currentBookIndex">
+            <!-- Vérification de nullité avant d'accéder à la propriété -->
+            <h2>{{ HPCollection.length > 0 ? HPCollection[currentBookIndex].bookName : '' }}</h2>
+            <img :src="HPCollection.length > 0 ? HPCollection[currentBookIndex].book.image : ''" alt="Book Image">
+            <h3>{{ HPCollection.length > 0 ? `$${HPCollection[currentBookIndex].book.price.toFixed(2)}` : '' }}</h3>
+        </div>
+
+        <div class="part" id="movie" v-show="currentSection === 'movie'" key="movie">
+            <!-- Vérification de nullité avant d'accéder à la propriété -->
+            <h2>{{ HPCollection.length > 0 ? HPCollection[currentBookIndex].bookName : '' }}</h2>
+            <img :src="HPCollection.length > 0 ? HPCollection[currentBookIndex].movie.image : ''" alt="Movie Image">
+            <h3>{{ HPCollection.length > 0 ? `$${HPCollection[currentBookIndex].movie.price.toFixed(2)}` : '' }}</h3>
+           
+        </div>
+        
+    </div>
+    <script src="js/script.js"></script>
+    <footer>
+        <h5></h5>
+    </footer>
+</body>
+</html>
