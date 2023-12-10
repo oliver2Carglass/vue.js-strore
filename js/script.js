@@ -53,12 +53,17 @@ const app = Vue.createApp({
         },
         updateStock() {
             const currentBook = this.HPCollection[this.currentBookIndex];
-        
+            
             // Vérifie si l'élément actuel existe dans stockData
             const stockElement = this.stockData.stock.find(element => element.bookName === currentBook.bookName);
-        
+            
             // Met à jour la variable stock en fonction de la valeur de l'élément dans stockData
             this.stock = stockElement ? stockElement[this.currentSection] : false;
+    
+            // Correction pour mettre à jour correctement la section "movie"
+            if (this.currentSection === 'movie') {
+                this.stock = stockElement ? stockElement.movie : false;
+            }
         }
         
     }
