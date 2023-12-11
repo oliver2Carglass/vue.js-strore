@@ -1,3 +1,9 @@
+/* swip permit to swip between the 2 sections and #swipboard is the container */
+#swipboard{
+    display: flex;
+    margin-left: 10vw;
+}
+
 .swip{
     margin-bottom: 0;
     text-align: center;
@@ -26,10 +32,8 @@
    
 }
 
-#swipboard{
-    display: flex;
-    margin-left: 10vw;
-}
+
+/* app is about the view app */
 
 #app{
     height: 100vh;
@@ -39,6 +43,7 @@
     background-repeat: no-repeat;
 }
 
+/* article name */
 h2{
     color: white;
    
@@ -50,6 +55,7 @@ h2{
 
 }
 
+/* article illustration */
 
 img{
     width: 15vw;
@@ -58,6 +64,8 @@ img{
     
 }
 
+/* h3 is the price displayer */
+
 h3{
     font-size: 7vh;
     margin: 2vh;
@@ -65,6 +73,8 @@ h3{
     font-family: HP;
     text-align: center;
 }
+
+/* displaying the name of this web site */
 
 h1{
     font-size: 12vh;
@@ -76,11 +86,14 @@ h1{
     margin-top: 2vh;
 }
 
+/* importing the Harry Potter font */
+
 @font-face {
     font-family: HP;
     src: url(../HARRYP__.TTF);
 }
 
+/* the next previus button to swich between elements */
 
 #next , #prev{
     height: 20vh;
@@ -94,6 +107,11 @@ h1{
     border: 1px white solid;
 }
 
+#next:hover , #prev:hover{
+    cursor: pointer;
+
+}
+
 #next{
     left: 91vw;
 }
@@ -102,9 +120,12 @@ h1{
     left: 5.5vw;
 }
 
+/* dynamic view class to show in wich section you are */
+
 .active-swip {
-    background-color: rgba(142, 68, 173, 0.8); /* Choisissez la couleur de fond souhaitée */
+    background-color: rgba(142, 68, 173, 0.8); 
 }
+
 
 footer{
     height: 50vh;
@@ -113,6 +134,8 @@ footer{
     top: 100vh;
     background-color: black;
 }
+
+/* dynamic view classes used for the button "BUY" */
 
 .instock{
     position: absolute;
@@ -151,6 +174,7 @@ footer{
 
 }
 
+/* Basket is the div used for diplaying the elements */
 
 #basket{
     border-radius: 50%;
@@ -175,6 +199,7 @@ footer{
     margin-top: 0;
 }
 
+/* relative classes about form */
 
 form{
     gap:10px;

@@ -3,52 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HARRY POTTER</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     
     <div id="app">
+        <!-- bascket for items -->
         <div id="basket">
             <h2>current total price</h2>
             <p>{{total}}€</p>
         </div>
+        <!-- buy button, next button and previus button -->
         <button :class="{ 'instock': stock, 'nostock': !stock }" @click="addValue">{{ stock ? 'BUY' : 'No stock' }}</button>
         <button  id="next" @click="nextBook">></button>
         <button id="prev" @click="prevBook"><</button>
         <h1>Harry Potter Store</h1>
+        <!-- swipe braod for section -->
         <div id="swipboard">
             <div :class="{ 'swip': true, 'active-swip': currentSection === 'book' }" style="border-radius: 50px 0 0 0;" @click="swipSection('book')">Book</div>
             <div :class="{ 'swip': true, 'active-swip': currentSection === 'movie' }" style="border-radius: 0 50px 0 0;" @click="swipSection('movie')">Movie</div>
         </div>
         
         
-        
-
+        <!-- two section displayed by v-show -->
+ 
         <div class="part" id="book" v-show="currentSection === 'book'" :key="currentBookIndex">
-            <!-- Vérification de nullité avant d'accéder à la propriété -->
+            <!-- displaying the data by using view -->
             <h2>{{ HPCollection.length > 0 ? HPCollection[currentBookIndex].bookName : '' }}</h2>
             <img :src="HPCollection.length > 0 ? HPCollection[currentBookIndex].book.image : ''" alt="Book Image">
             <h3>{{ HPCollection.length > 0 ? `$${HPCollection[currentBookIndex].book.price.toFixed(2)}` : '' }}</h3>
         </div>
 
         <div class="part" id="movie" v-show="currentSection === 'movie'" key="movie">
-            <!-- Vérification de nullité avant d'accéder à la propriété -->
+            
             <h2>{{ HPCollection.length > 0 ? HPCollection[currentBookIndex].bookName : '' }}</h2>
             <img :src="HPCollection.length > 0 ? HPCollection[currentBookIndex].movie.image : ''" alt="Movie Image">
             <h3>{{ HPCollection.length > 0 ? `$${HPCollection[currentBookIndex].movie.price.toFixed(2)}` : '' }}</h3>
            
         </div>
         <footer>
+            <!-- form -->
             <form id="feedBack">
                 <label for="mail">Mail</label>
                 <input type="email" v-model="email">
                 
                 <label for="feedback">Feedback:</label>
                 <textarea id="feedback" v-model="feedback"></textarea>
-
-                <!-- Ajoute un bouton pour envoyer le formulaire -->
                 <button type="button" @click="submitFeedback">Envoyer Feedback</button>
             </form>
         </footer>
